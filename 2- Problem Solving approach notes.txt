@@ -1,0 +1,45 @@
+What is Algorithn?
+- A process or set of steps to accomplish a certain task
+- Almost everything you do in the programming involves some sort of it
+How do u improve in it?
+- Devise a plan for solving problems
+- Master common problem solving patterns
+Problem Solving Strategies
+- Understand the problem
+    - Ask questions to understand it 
+    - Restate it in your own words
+    - What are the inputs
+        - Type of them
+        - Validation if some are null or another types
+        - Upper and lower validations
+    - What are the outputs should come from the solution
+        - Type of them
+        - Output from the other cases (not the happy cases)
+    - Can the outputs be determined from the inputs? (Do you have enough information to solve the problem)
+    - Try to label the important pieces of the data that are a part of the problem.
+
+- Explore Concrete examples
+    - Come up with examples can help you understand the problem better
+    - Examples also provide sanity checks that your eventual solution works how it should
+    - Use: user stories - unit tests
+        - Start with simple examples
+        - Progress to more complex ones (e.g. Egdes)
+        - Examples with empty inputs
+        - Examples with invalid inputs
+- Break it down
+    - Explicitly write out the steps you need to take to force you think about the code before you write it
+    - You can write comments before starting in the code
+- Solve / Simplify
+    - Solve the problem and if you can't, just solve a simpler problem (happy case)
+    - Find the core difficulty in what you are trying to do
+    - Temporarily ignore that part
+    - Write a simplified solution
+    - Then back to that difficulty part
+- Look back and refactor
+    - Can you check the result?
+    - Can you derive the result differently?
+    - Can you understand it at a glance?
+    - Can you use the result or method for some other problem?
+    - Can you improve the performance of your solution?(time/space complexity)
+    - Can you think of other ways to refactor?
+    - How have other people solved this problem?(Check others' answers)

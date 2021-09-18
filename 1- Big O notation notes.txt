@@ -1,0 +1,93 @@
+Big O Notation
+---------------
+- Numeric way to measure which solution is better
+- Depends only on the algorithm not the hardware used to run the algorithm.
+- Define which code is better:
+    - Faster?
+    - Less memory-intensive? (Data stored, variables created...)
+    - More readable? 
+- Measuring it by time? (use performance.now()) 
+    - It is not reliable, as it may change from device to another - it may give different results on the same machine
+    - For fast algorithms, it may not be precise enough
+
+- We can count the number of simple operations the machine has to perform
+- Big O: 
+    - it used to measure Time complexity and Space complexity.
+    - Time complexity: how we can analyze the runtime of the algorithm as the size of inputs increases
+    - It is a way to formalize fuzzy counting
+    - O(f(n)) -> O(n), O(n^2), ...
+    - We care about the big picture; so
+        - Constants Don't matter
+            - O(400) => O(1)
+            - O(2n) ==> O(n) it will be -just- a linear. 
+            - O(20 n^2) ==> O(n^2)
+        - Smaller terms Don't matter
+            - O(n + 100) ==> O(n) 
+            - O(1000n + 10) ==> O(n)
+            - O(n^2 + 5n + 10) ==> O(n^2) - ignore smaller terms
+    - Big O shorthands
+        - Arithmetic operations are Constant
+        - Varialbe assignement is Constant
+        - Accessing elements in an array by index or object by key is Constant
+        - In a loop, the complexity is the length of the loop TIMES the complexityof whatever happens insidethe loop
+---    
+    - Space complexity: how much additional memory do we need to allocate in order to run the code in the algorithm.
+        - Auxiliary space complexity is the space required by the algorithm, not including space taken up by the inputs.
+    - Space complexity in just JS
+        - Most primitives are constant space
+        - Strings require O(n) space (n: string length)
+        - Reference types -> O(n); n: lentgh (for arrays) or number of keys (for objects)
+        - We arr caring about the variables created in our code not the input to that code.
+
+- Common Big O Notations:
+    - O(1): Constant; no of operations not affected by the number of inputs
+    - O(n): Linear; no of operations is bounded by a multiple of n; it growth linearly
+    - O(n^2): Quadratic; O(n) operations inside of an O(n) operations; it can be nested loops.
+    - O(log n): Logarithm; (we will omit the logarithm base as we care about the big picture) logarithms of a numbe is how many times you need to divide the number by 2 before getting a value less than or equals to o 1.
+        - Some Searching and Sorting algorithms have logarithmic time complexity
+        - Recursion has logarithmic space complexity
+
+    - Quick comparison:
+        - O(n^2) > O(nlog n) > O(n) > O(log n) > O(1)  
+        - O(1) is the best
+
+- Big O of Objects 
+    - Use objects when you don't need any ordering
+    - Objects operations - (uses hash table, hash map)
+        - O(n) - n: number of keys in the object
+            - Searching
+            - Object.keys(obj) 
+            - Object.values(obj)
+            - Object.entries(obj)
+        - O(1)
+            - Insertion
+            - Removal by specific key 
+            - Access by specific key 
+            - hasOwnProperty - obj.hasOwnProperty("key")
+
+- Big O of Arrays 
+    - Use arrays when you need ordered list
+    - Arrays operations
+        - O(n*log n)
+            - sort
+        - O(n) - n: number of keys in the object
+            - Linear Searching
+            - shift, unshift
+            - concat
+            - slice, splice
+            - forEach, map, filer ...
+        - O(1)
+            - Access by index 
+            - push, pop
+        - It depends on where 
+            - Insertion
+                - Insert to the bigenning needs reIndexing the array -> O(n)
+                - Insert to the end -> O(n) [push]
+            - Removal
+                - Remove from the bigenning needs reIndexing the array -> O(n)
+                - Remove from the end -> O(1) [pop]
+    - Avoid adding to OR removing from the beginning as it needs reindexing 
+
+           
+    
+
