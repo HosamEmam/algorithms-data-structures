@@ -1,8 +1,7 @@
 using NUnit.Framework;
-using Algorithms.Solutions;
 using Algorithms.Solutions.FrequencyCounter;
 
-namespace Algorithms.Solutions.SolutionsTests
+namespace Algorithms.Solutions.UnitTests.FrequencyCounter.Tests
 {
     /// <summary>
     /// Write a function called same, which accepts two arrays. 

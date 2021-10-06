@@ -3,8 +3,6 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-
-
 namespace Algorithms.Solutions.FrequencyCounter
 {
     public class SameInArrays

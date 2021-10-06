@@ -1,8 +1,7 @@
 using NUnit.Framework;
-using Algorithms.Solutions;
 using Algorithms.Solutions.FrequencyCounter;
 
-namespace Algorithms.Solutions.SolutionsTests
+namespace Algorithms.Solutions.UnitTests.FrequencyCounter.Tests
 {
     /// <summary>
     /// Given two strings, write a function to determine if the second string is an anagram of the first. 
@@ -22,14 +21,14 @@ namespace Algorithms.Solutions.SolutionsTests
         {
             var str1 = "";
             var str2 = "";
-            Assert.IsTrue(AnagramCheck.IsAnagram(str1,str2));
+            Assert.IsTrue(AnagramCheck.IsAnagram(str1, str2));
         }
-         [Test]
+        [Test]
         public void CheckAnagram_When_TwoStringsIsNotSameLength_Expects_False()
         {
             var str1 = "abc";
             var str2 = "aaaa";
-            Assert.IsFalse(AnagramCheck.IsAnagram(str1,str2));
+            Assert.IsFalse(AnagramCheck.IsAnagram(str1, str2));
         }
 
         [Test]
@@ -37,7 +36,7 @@ namespace Algorithms.Solutions.SolutionsTests
         {
             var str1 = "abc";
             var str2 = "cba";
-            Assert.IsTrue(AnagramCheck.IsAnagram(str1,str2));
+            Assert.IsTrue(AnagramCheck.IsAnagram(str1, str2));
         }
 
         [Test]
@@ -45,14 +44,14 @@ namespace Algorithms.Solutions.SolutionsTests
         {
             var str1 = "awesome";
             var str2 = "awesoms";
-            Assert.IsFalse(AnagramCheck.IsAnagram(str1,str2));
+            Assert.IsFalse(AnagramCheck.IsAnagram(str1, str2));
         }
         [Test]
         public void CheckAnagram_When_TwoStringsAreAnagrmWithOneStringHasUpperCases_Expects_True()
         {
             var str1 = "texttwisttime";
             var str2 = "Timetwisttext";
-            Assert.IsTrue(AnagramCheck.IsAnagram(str1,str2));
+            Assert.IsTrue(AnagramCheck.IsAnagram(str1, str2));
         }
     }
 }

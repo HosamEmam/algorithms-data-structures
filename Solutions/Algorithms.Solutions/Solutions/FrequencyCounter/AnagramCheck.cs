@@ -1,9 +1,7 @@
-using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 
-namespace Algorithms.Solutions.FrequencyCounter{
+namespace Algorithms.Solutions.FrequencyCounter
+{
     public class AnagramCheck
     {
         public static bool? IsAnagram2(string str1, string str2)
